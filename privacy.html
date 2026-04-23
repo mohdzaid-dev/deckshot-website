@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — DeckShot</title>
+<meta name="description" content="Privacy Policy for DeckShot — how we collect, use, and protect your personal information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07080f;
+  --bg2: #0d0e1a;
+  --surface: #151627;
+  --surface2: #1c1d30;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.1);
+  --violet: #7c6af7;
+  --violet2: #9d8fff;
+  --violet-dim: rgba(124,106,247,0.12);
+  --teal: #22c37a;
+  --amber: #f7b96a;
+  --text: #f0eff8;
+  --text2: #9896b0;
+  --text3: #5a587a;
+  --mono: 'JetBrains Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+/* Nav */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 18px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(7,8,15,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo-icon {
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  background: var(--violet);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+
+.nav-logo-text {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.nav-back {
+  font-size: 13px;
+  color: var(--text2);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  transition: color 0.2s;
+}
+
+.nav-back:hover { color: var(--violet); }
+
+/* Hero */
+.page-hero {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 60px 48px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(124,106,247,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero-inner { max-width: 860px; margin: 0 auto; }
+
+.page-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--violet);
+  background: var(--violet-dim);
+  border: 1px solid rgba(124,106,247,0.25);
+  border-radius: 6px;
+  padding: 4px 12px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.page-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.meta-value {
+  font-size: 14px;
+  color: var(--text2);
+}
+
+/* Layout */
+.page-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* Sidebar TOC */
+.sidebar {
+  padding: 48px 0 48px;
+  position: sticky;
+  top: 68px;
+  height: fit-content;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  border-right: 1px solid var(--border);
+  padding-right: 32px;
+  margin-right: 64px;
+}
+
+.sidebar::-webkit-scrollbar { display: none; }
+
+.sidebar-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toc-list a {
+  display: block;
+  font-size: 13px;
+  color: var(--text3);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1.4;
+}
+
+.toc-list a:hover {
+  color: var(--violet);
+  background: var(--violet-dim);
+}
+
+/* Content */
+.page-content {
+  padding: 48px 0 80px;
+}
+
+/* Intro box */
+.intro-box {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-left: 4px solid var(--violet);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+.intro-box strong { color: var(--text); font-weight: 500; }
+
+/* Sections */
+.policy-section {
+  margin-bottom: 56px;
+  scroll-margin-top: 90px;
+}
+
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--violet);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-heading {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-body {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.8;
+}
+
+.section-body p { margin-bottom: 16px; }
+.section-body p:last-child { margin-bottom: 0; }
+.section-body strong { color: var(--text); font-weight: 500; }
+
+.section-body h4 {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 24px 0 10px;
+}
+
+.section-body ul, .section-body ol {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-body ul li, .section-body ol li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.section-body ul li::before {
+  content: '·';
+  position: absolute;
+  left: 6px;
+  color: var(--violet);
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.section-body ol {
+  counter-reset: item;
+}
+
+.section-body ol li {
+  counter-increment: item;
+}
+
+.section-body ol li::before {
+  content: counter(item) '.';
+  position: absolute;
+  left: 0;
+  color: var(--violet);
+  font-family: var(--mono);
+  font-size: 12px;
+  top: 3px;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.highlight-box.amber {
+  border-color: rgba(247,185,106,0.2);
+  background: rgba(247,185,106,0.05);
+}
+
+.highlight-box.teal {
+  border-color: rgba(34,195,122,0.2);
+  background: rgba(34,195,122,0.05);
+}
+
+.highlight-box strong {
+  color: var(--amber);
+  font-weight: 500;
+}
+
+.highlight-box.teal strong { color: var(--teal); }
+
+/* Contact section */
+.contact-box {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-top: 48px;
+}
+
+.contact-box h3 {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.contact-box p {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+.contact-detail a {
+  color: var(--violet);
+  text-decoration: none;
+  font-family: var(--mono);
+}
+
+/* Footer */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 32px 48px;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.footer-bottom a {
+  color: var(--violet);
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--text2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--violet); }
+
+@media (max-width: 900px) {
+  nav { padding: 16px 20px; }
+  .page-hero { padding: 40px 20px 36px; }
+  .page-layout { grid-template-columns: 1fr; padding: 0 20px; }
+  .sidebar { display: none; }
+  footer { padding: 24px 20px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">⚡</div>
+    <span class="nav-logo-text">DeckShot</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-tag">Legal Document</div>
+    <h1 class="page-title">Privacy Policy</h1>
+    <div class="page-meta">
+      <div class="meta-item">
+        <span class="meta-label">Effective Date</span>
+        <span class="meta-value">1 May 2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Last Updated</span>
+        <span class="meta-value">1 May 2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Jurisdiction</span>
+        <span class="meta-value">India (IT Act, 2000 & DPDP Act, 2023)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Contact</span>
+        <span class="meta-value">contact@deckshot.in</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-layout">
+
+  <!-- Sidebar TOC -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#overview">1. Overview</a></li>
+      <li><a href="#information-collected">2. Information We Collect</a></li>
+      <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+      <li><a href="#payment-data">4. Payment Data & Processing</a></li>
+      <li><a href="#data-sharing">5. Data Sharing & Disclosure</a></li>
+      <li><a href="#data-storage">6. Data Storage & Security</a></li>
+      <li><a href="#offline-storage">7. Local & Offline Storage</a></li>
+      <li><a href="#user-rights">8. Your Rights</a></li>
+      <li><a href="#children">9. Children's Privacy</a></li>
+      <li><a href="#third-party">10. Third-Party Services</a></li>
+      <li><a href="#cookies">11. Cookies & Tracking</a></li>
+      <li><a href="#data-retention">12. Data Retention</a></li>
+      <li><a href="#international">13. International Transfers</a></li>
+      <li><a href="#changes">14. Changes to This Policy</a></li>
+      <li><a href="#grievance">15. Grievance Officer</a></li>
+      <li><a href="#contact-privacy">16. Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="page-content">
+
+    <div class="intro-box">
+      This Privacy Policy explains how <strong>DeckShot</strong> ("we", "us", or "our"), operated by <strong>Mohd Zaid</strong> (sole proprietor), collects, uses, stores, and protects your personal information when you use our mobile application ("App") and website at <strong>deckshot.in</strong> ("Website"). By using DeckShot, you agree to the practices described in this policy. If you do not agree, please discontinue use of the App and Website.
+    </div>
+
+    <!-- 1. Overview -->
+    <div class="policy-section" id="overview">
+      <span class="section-num">01 /</span>
+      <h2 class="section-heading">Overview & Scope</h2>
+      <div class="section-body">
+        <p>DeckShot is a developer interview preparation application available on the Google Play Store (Android). This Privacy Policy applies to:</p>
+        <ul>
+          <li>The DeckShot mobile application (Android)</li>
+          <li>The DeckShot website at deckshot.in</li>
+          <li>All services, features, and content offered under the DeckShot brand</li>
+          <li>Communications between you and DeckShot (email, in-app support)</li>
+        </ul>
+        <p>This policy is compliant with the <strong>Information Technology Act, 2000</strong>, the <strong>Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</strong>, and the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong> of India.</p>
+        <div class="highlight-box teal">
+          <strong>Plain language summary:</strong> We collect only what we need to run the service. We do not sell your data. We do not share your data with advertisers. Your payment information is processed by Razorpay — we never see or store your card details.
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Information We Collect -->
+    <div class="policy-section" id="information-collected">
+      <span class="section-num">02 /</span>
+      <h2 class="section-heading">Information We Collect</h2>
+      <div class="section-body">
+        <h4>2.1 Information You Provide Directly</h4>
+        <ul>
+          <li><strong>Account registration:</strong> Full name, email address, and password when you create an account</li>
+          <li><strong>Contact information:</strong> Phone number (optional, provided during signup)</li>
+          <li><strong>Profile data:</strong> Any information you voluntarily add to your profile</li>
+          <li><strong>Communications:</strong> Messages, feedback, or support requests you send to us</li>
+        </ul>
+
+        <h4>2.2 Information Collected Automatically</h4>
+        <ul>
+          <li><strong>Usage data:</strong> Questions viewed, cards completed, topics unlocked, session duration</li>
+          <li><strong>Progress data:</strong> Cards marked as "Known" or "Again", bookmarked questions, deck completion status</li>
+          <li><strong>Device information:</strong> Device type, operating system version, app version, unique device identifiers</li>
+          <li><strong>Network information:</strong> IP address, connection type (Wi-Fi/mobile data), general location derived from IP (country/city level only)</li>
+          <li><strong>App performance data:</strong> Crash reports, error logs, performance metrics</li>
+        </ul>
+
+        <h4>2.3 Information from Third-Party Services</h4>
+        <ul>
+          <li><strong>Google Sign-In (if used):</strong> Name, email address, and profile photo from your Google account</li>
+          <li><strong>Payment processors:</strong> Transaction confirmation, order ID, and payment status from Razorpay (no card data is passed to us)</li>
+        </ul>
+
+        <h4>2.4 Information We Do NOT Collect</h4>
+        <ul>
+          <li>Credit/debit card numbers, CVV, or banking credentials</li>
+          <li>SMS messages or call logs</li>
+          <li>Contacts or phonebook data</li>
+          <li>Precise real-time GPS location</li>
+          <li>Biometric data</li>
+          <li>Photos, camera, or microphone data</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. How We Use -->
+    <div class="policy-section" id="how-we-use">
+      <span class="section-num">03 /</span>
+      <h2 class="section-heading">How We Use Your Information</h2>
+      <div class="section-body">
+        <p>We use the information we collect for the following purposes, each supported by a lawful basis under applicable law:</p>
+
+        <h4>3.1 To Provide and Operate the Service</h4>
+        <ul>
+          <li>Create and manage your account</li>
+          <li>Authenticate your identity and maintain session security</li>
+          <li>Deliver the flashcard content and track your progress across sessions</li>
+          <li>Manage topic unlocks and verify payment status</li>
+          <li>Enable offline access to downloaded content</li>
+          <li>Sync your bookmarks and progress across devices</li>
+        </ul>
+
+        <h4>3.2 To Process Payments</h4>
+        <ul>
+          <li>Initiate payment orders via Razorpay</li>
+          <li>Verify payment success or failure via webhook notifications</li>
+          <li>Record transaction history for your account</li>
+          <li>Issue receipts and maintain financial records as required by Indian tax law</li>
+        </ul>
+
+        <h4>3.3 To Improve the Service</h4>
+        <ul>
+          <li>Analyse usage patterns to improve app features and content quality</li>
+          <li>Monitor crash reports and performance issues</li>
+          <li>Identify frequently bookmarked or difficult questions to prioritise content improvements</li>
+        </ul>
+
+        <h4>3.4 To Communicate With You</h4>
+        <ul>
+          <li>Send transactional emails (payment confirmations, account security)</li>
+          <li>Notify you of new topic launches or significant product updates</li>
+          <li>Respond to your support requests</li>
+        </ul>
+
+        <h4>3.5 To Comply With Legal Obligations</h4>
+        <ul>
+          <li>Maintain records required by Indian tax and financial regulations</li>
+          <li>Respond to lawful requests from government or law enforcement authorities</li>
+          <li>Enforce our Terms of Service</li>
+        </ul>
+
+        <div class="highlight-box amber">
+          <strong>We do not use your data for:</strong> Targeted advertising, sale to third-party marketers, profiling for commercial purposes unrelated to DeckShot, or automated decision-making that significantly affects you.
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Payment Data -->
+    <div class="policy-section" id="payment-data">
+      <span class="section-num">04 /</span>
+      <h2 class="section-heading">Payment Data & Processing</h2>
+      <div class="section-body">
+        <p>DeckShot uses <strong>Razorpay Software Private Limited</strong> ("Razorpay") as its payment gateway for processing all in-app purchases. Razorpay is a PCI-DSS Level 1 certified payment processor regulated by the Reserve Bank of India (RBI).</p>
+
+        <h4>4.1 What Razorpay Collects</h4>
+        <p>When you make a payment, Razorpay collects and processes your payment instrument details (card number, UPI ID, net banking credentials, wallet details). <strong>DeckShot does not receive, store, or have access to your full card number, CVV, PIN, or banking passwords at any point.</strong></p>
+
+        <h4>4.2 What DeckShot Receives</h4>
+        <ul>
+          <li>Razorpay Order ID and Payment ID</li>
+          <li>Payment status (success / failure / pending)</li>
+          <li>Amount paid and currency</li>
+          <li>Timestamp of transaction</li>
+          <li>Masked payment method (e.g., "card ending in 4242" or "UPI")</li>
+        </ul>
+
+        <h4>4.3 Payment Verification</h4>
+        <p>All payment verifications are performed server-side via Razorpay webhooks using cryptographic signature verification. Client-side payment confirmation is never trusted as the sole source of truth.</p>
+
+        <h4>4.4 Refund Policy</h4>
+        <p>Refunds are processed at our discretion. If you believe you were incorrectly charged, contact us at <strong>contact@deckshot.in</strong> within 7 days of purchase. Verified erroneous charges will be refunded to the original payment method within 5–7 business days.</p>
+
+        <h4>4.5 Transaction Records</h4>
+        <p>Transaction records are retained for a minimum of 7 years as required under Indian accounting and tax regulations (Income Tax Act, 1961 and GST laws).</p>
+
+        <div class="highlight-box teal">
+          <strong>Razorpay Privacy Policy:</strong> Payments are governed by Razorpay's own privacy policy and terms of service, available at razorpay.com/privacy. DeckShot is not responsible for Razorpay's data practices.
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Data Sharing -->
+    <div class="policy-section" id="data-sharing">
+      <span class="section-num">05 /</span>
+      <h2 class="section-heading">Data Sharing & Disclosure</h2>
+      <div class="section-body">
+        <p>We do not sell, rent, or trade your personal information to any third party. We share your information only in the following limited circumstances:</p>
+
+        <h4>5.1 Service Providers</h4>
+        <ul>
+          <li><strong>Supabase Inc.</strong> — Database, authentication, and backend infrastructure provider. Data is stored on Supabase's servers. Supabase is SOC 2 Type II compliant.</li>
+          <li><strong>Razorpay Software Private Limited</strong> — Payment processing. Only payment-relevant data is shared as described in Section 4.</li>
+          <li><strong>Google LLC</strong> — Google Play Store distribution, Google Sign-In (if used), and Firebase Analytics/Crashlytics for app performance monitoring.</li>
+        </ul>
+
+        <h4>5.2 Legal Requirements</h4>
+        <p>We may disclose your information if required to do so by law, court order, or government authority, or if we believe in good faith that such disclosure is necessary to:</p>
+        <ul>
+          <li>Comply with a legal obligation under Indian law or other applicable jurisdiction</li>
+          <li>Protect and defend the rights or property of DeckShot</li>
+          <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+          <li>Protect the personal safety of users or the public</li>
+        </ul>
+
+        <h4>5.3 Business Transfers</h4>
+        <p>In the event of a merger, acquisition, or sale of all or substantially all assets, your personal data may be transferred to the acquiring entity. We will notify you via email or prominent in-app notice before such transfer occurs and before your data becomes subject to a different privacy policy.</p>
+
+        <h4>5.4 Aggregated Data</h4>
+        <p>We may share aggregated, anonymised, and non-personally identifiable data (e.g., "60% of users bookmark closure questions") for analytical or marketing purposes. This data cannot be used to identify you individually.</p>
+      </div>
+    </div>
+
+    <!-- 6. Data Storage & Security -->
+    <div class="policy-section" id="data-storage">
+      <span class="section-num">06 /</span>
+      <h2 class="section-heading">Data Storage & Security</h2>
+      <div class="section-body">
+        <h4>6.1 Where Your Data Is Stored</h4>
+        <p>Your account data, progress, bookmarks, and purchase records are stored on <strong>Supabase</strong> servers located in the <strong>ap-southeast-1 region (Singapore)</strong>. This data is secured by:</p>
+        <ul>
+          <li>Row Level Security (RLS) policies enforced at the database level — each user can only access their own data</li>
+          <li>TLS/SSL encryption for all data in transit</li>
+          <li>AES-256 encryption for data at rest</li>
+          <li>Supabase's SOC 2 Type II certified infrastructure</li>
+        </ul>
+
+        <h4>6.2 Security Measures We Implement</h4>
+        <ul>
+          <li>Passwords are hashed using bcrypt with salt — never stored in plain text</li>
+          <li>Authentication tokens are short-lived and rotate automatically</li>
+          <li>Payment webhook signatures are cryptographically verified server-side</li>
+          <li>Offline question data on your device is encrypted with AES-256-CBC with PBKDF2 key derivation (5,000 iterations)</li>
+          <li>No sensitive data is stored in unencrypted local storage</li>
+        </ul>
+
+        <h4>6.3 Security Limitations</h4>
+        <p>No method of electronic storage or transmission is 100% secure. While we implement industry-standard security measures, we cannot guarantee absolute security of your data. In the event of a data breach that affects your rights and freedoms, we will notify you within 72 hours of becoming aware of the breach, as required by applicable law.</p>
+      </div>
+    </div>
+
+    <!-- 7. Offline Storage -->
+    <div class="policy-section" id="offline-storage">
+      <span class="section-num">07 /</span>
+      <h2 class="section-heading">Local & Offline Storage</h2>
+      <div class="section-body">
+        <p>DeckShot allows you to download question decks for offline use. The following data is stored locally on your device:</p>
+        <ul>
+          <li><strong>Downloaded question decks:</strong> Stored in AES-256-CBC encrypted format in AsyncStorage. The encryption key is derived using PBKDF2 with a device-specific salt.</li>
+          <li><strong>Session tokens:</strong> Authentication credentials stored in the device's secure local storage.</li>
+          <li><strong>App preferences:</strong> Theme settings, notification preferences, and last-viewed position — stored in non-sensitive local storage.</li>
+        </ul>
+        <p>Local data remains on your device and is not transmitted to our servers except when syncing your progress. You can delete all locally stored data by uninstalling the app. Reinstalling will require re-downloading any previously downloaded decks.</p>
+      </div>
+    </div>
+
+    <!-- 8. User Rights -->
+    <div class="policy-section" id="user-rights">
+      <span class="section-num">08 /</span>
+      <h2 class="section-heading">Your Rights</h2>
+      <div class="section-body">
+        <p>Under the Digital Personal Data Protection Act, 2023 (DPDP Act) and applicable Indian law, you have the following rights regarding your personal data:</p>
+
+        <h4>8.1 Right to Access</h4>
+        <p>You have the right to request a copy of the personal data we hold about you, including the categories of data, the purposes for which it is processed, and details of any sharing with third parties.</p>
+
+        <h4>8.2 Right to Correction</h4>
+        <p>You have the right to request correction of any inaccurate or incomplete personal data we hold about you. You can update your name and email directly within the app's Profile section.</p>
+
+        <h4>8.3 Right to Erasure ("Right to be Forgotten")</h4>
+        <p>You have the right to request deletion of your personal data. Upon request, we will delete your account and associated personal data within 30 days, except where retention is required by law (e.g., financial transaction records).</p>
+
+        <h4>8.4 Right to Data Portability</h4>
+        <p>You have the right to receive your personal data in a structured, commonly used, machine-readable format (JSON/CSV) and to transmit it to another controller.</p>
+
+        <h4>8.5 Right to Withdraw Consent</h4>
+        <p>Where processing is based on your consent, you have the right to withdraw that consent at any time. Withdrawal of consent does not affect the lawfulness of processing prior to withdrawal.</p>
+
+        <h4>8.6 Right to Nominate</h4>
+        <p>Under the DPDP Act, 2023, you have the right to nominate another individual to exercise your data rights in the event of your death or incapacity.</p>
+
+        <h4>8.7 How to Exercise Your Rights</h4>
+        <p>To exercise any of the above rights, email us at <strong>contact@deckshot.in</strong> with the subject line "Data Rights Request". We will respond within 30 days. We may need to verify your identity before processing your request.</p>
+      </div>
+    </div>
+
+    <!-- 9. Children -->
+    <div class="policy-section" id="children">
+      <span class="section-num">09 /</span>
+      <h2 class="section-heading">Children's Privacy</h2>
+      <div class="section-body">
+        <p>DeckShot is designed for individuals aged <strong>18 years and above</strong>. Our service is intended for working professionals and students preparing for employment in the technology industry.</p>
+        <p>We do not knowingly collect personal information from children under the age of 18. If you are a parent or guardian and believe your child has provided personal information to us, please contact us immediately at <strong>contact@deckshot.in</strong>. Upon verification, we will promptly delete such information from our systems.</p>
+        <p>If we become aware that we have collected personal data from a minor without verifiable parental consent, we will take steps to remove that information from our servers.</p>
+      </div>
+    </div>
+
+    <!-- 10. Third Party -->
+    <div class="policy-section" id="third-party">
+      <span class="section-num">10 /</span>
+      <h2 class="section-heading">Third-Party Services</h2>
+      <div class="section-body">
+        <p>The DeckShot app integrates with the following third-party services. Each has its own privacy policy:</p>
+
+        <h4>Supabase (Database & Auth)</h4>
+        <ul>
+          <li>Provider: Supabase Inc., USA</li>
+          <li>Purpose: User authentication, database storage, real-time sync</li>
+          <li>Privacy Policy: supabase.com/privacy</li>
+          <li>Data: Account data, progress, bookmarks, purchase records</li>
+        </ul>
+
+        <h4>Razorpay (Payment Processing)</h4>
+        <ul>
+          <li>Provider: Razorpay Software Private Limited, India</li>
+          <li>Purpose: Processing in-app purchases</li>
+          <li>Privacy Policy: razorpay.com/privacy</li>
+          <li>Data: Payment instrument details, transaction records</li>
+          <li>Compliance: PCI-DSS Level 1, RBI regulated</li>
+        </ul>
+
+        <h4>Google Play Services</h4>
+        <ul>
+          <li>Provider: Google LLC, USA</li>
+          <li>Purpose: App distribution, Google Sign-In (optional), crash reporting</li>
+          <li>Privacy Policy: policies.google.com/privacy</li>
+        </ul>
+
+        <h4>Firebase (Crashlytics & Analytics — optional)</h4>
+        <ul>
+          <li>Provider: Google LLC, USA</li>
+          <li>Purpose: Crash reporting and anonymous usage analytics</li>
+          <li>Privacy Policy: firebase.google.com/support/privacy</li>
+          <li>Data: Anonymous crash logs, device info, app usage patterns</li>
+        </ul>
+
+        <p>DeckShot is not responsible for the privacy practices of these third-party services. We recommend reviewing their respective privacy policies.</p>
+      </div>
+    </div>
+
+    <!-- 11. Cookies -->
+    <div class="policy-section" id="cookies">
+      <span class="section-num">11 /</span>
+      <h2 class="section-heading">Cookies & Tracking</h2>
+      <div class="section-body">
+        <h4>11.1 Mobile App</h4>
+        <p>The DeckShot mobile app does not use browser cookies. The app uses the following local storage mechanisms:</p>
+        <ul>
+          <li><strong>AsyncStorage:</strong> For storing authentication tokens, user preferences, and encrypted offline content</li>
+          <li><strong>Secure Storage:</strong> For sensitive credentials, using the device's native secure storage (Keystore on Android)</li>
+        </ul>
+
+        <h4>11.2 Website (deckshot.in)</h4>
+        <p>Our website may use the following types of cookies:</p>
+        <ul>
+          <li><strong>Strictly necessary cookies:</strong> Required for the website to function. Cannot be disabled.</li>
+          <li><strong>Analytics cookies:</strong> Used to understand how visitors interact with the website (Google Analytics). These are anonymised.</li>
+        </ul>
+        <p>You can control cookie preferences through your browser settings. Disabling analytics cookies will not affect your ability to use the website.</p>
+
+        <h4>11.3 Opt-Out of Analytics</h4>
+        <p>You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color: var(--violet);">Google Analytics Opt-out Browser Add-on</a> or by enabling "Do Not Track" in your browser settings.</p>
+      </div>
+    </div>
+
+    <!-- 12. Data Retention -->
+    <div class="policy-section" id="data-retention">
+      <span class="section-num">12 /</span>
+      <h2 class="section-heading">Data Retention</h2>
+      <div class="section-body">
+        <p>We retain your personal data for as long as necessary to provide the Service and comply with our legal obligations:</p>
+        <ul>
+          <li><strong>Account data:</strong> Retained for the duration of your account. Deleted within 30 days of an account deletion request.</li>
+          <li><strong>Progress and bookmarks:</strong> Retained as long as your account is active. Deleted upon account deletion.</li>
+          <li><strong>Payment records:</strong> Retained for 7 years as required by Indian financial regulations (Income Tax Act, 1961).</li>
+          <li><strong>Crash reports and performance logs:</strong> Retained for 90 days, then automatically purged.</li>
+          <li><strong>Support communications:</strong> Retained for 2 years after resolution.</li>
+          <li><strong>Anonymised analytics data:</strong> May be retained indefinitely as it cannot identify individuals.</li>
+        </ul>
+        <p>When retention periods expire, data is securely deleted using industry-standard deletion methods.</p>
+      </div>
+    </div>
+
+    <!-- 13. International -->
+    <div class="policy-section" id="international">
+      <span class="section-num">13 /</span>
+      <h2 class="section-heading">International Data Transfers</h2>
+      <div class="section-body">
+        <p>DeckShot is based in India and primarily serves Indian users. Your data is stored on Supabase servers in Singapore (ap-southeast-1 region). By using our Service, you consent to your information being transferred to and processed in Singapore.</p>
+        <p>We ensure that any cross-border transfer of personal data complies with the requirements of the DPDP Act, 2023, including ensuring that the receiving country provides adequate data protection safeguards.</p>
+        <p>Supabase maintains appropriate data processing agreements and security certifications (SOC 2 Type II) to ensure your data is protected in transit and at rest.</p>
+      </div>
+    </div>
+
+    <!-- 14. Changes -->
+    <div class="policy-section" id="changes">
+      <span class="section-num">14 /</span>
+      <h2 class="section-heading">Changes to This Policy</h2>
+      <div class="section-body">
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or the services we offer. When we make material changes, we will:</p>
+        <ul>
+          <li>Update the "Last Updated" date at the top of this page</li>
+          <li>Send an email notification to registered users</li>
+          <li>Display a prominent in-app notification</li>
+        </ul>
+        <p>Your continued use of DeckShot after the effective date of the revised policy constitutes your acceptance of the changes. If you do not agree with the updated policy, you should stop using the Service and may request deletion of your account.</p>
+        <p>We encourage you to review this Privacy Policy periodically. Previous versions are available upon request at contact@deckshot.in.</p>
+      </div>
+    </div>
+
+    <!-- 15. Grievance -->
+    <div class="policy-section" id="grievance">
+      <span class="section-num">15 /</span>
+      <h2 class="section-heading">Grievance Officer</h2>
+      <div class="section-body">
+        <p>In accordance with the Information Technology Act, 2000 and the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, we have designated a Grievance Officer to address complaints and concerns regarding the processing of your personal data:</p>
+        <div class="highlight-box">
+          <strong style="color: var(--text);">Grievance Officer: Mohd Zaid</strong><br><br>
+          Role: Founder & Data Controller, DeckShot<br>
+          Email: contact@deckshot.in<br>
+          Address: Meerut, Uttar Pradesh, India<br>
+          Response Time: Within 30 days of receipt of complaint
+        </div>
+        <p>You may also lodge a complaint with the <strong>Data Protection Board of India</strong> (once operationalised under the DPDP Act, 2023) if you are not satisfied with our response to your grievance.</p>
+      </div>
+    </div>
+
+    <!-- 16. Contact -->
+    <div class="policy-section" id="contact-privacy">
+      <span class="section-num">16 /</span>
+      <h2 class="section-heading">Contact Us</h2>
+      <div class="section-body">
+        <p>For any questions, concerns, or requests related to this Privacy Policy or your personal data, please contact us:</p>
+      </div>
+      <div class="contact-box">
+        <h3>Get in Touch</h3>
+        <p>We take privacy seriously and will respond to all legitimate enquiries within 30 days.</p>
+        <div class="contact-detail">📧 Email: <a href="mailto:contact@deckshot.in">contact@deckshot.in</a></div>
+        <div class="contact-detail">🌐 Website: <a href="https://deckshot.in">deckshot.in</a></div>
+        <div class="contact-detail">📍 Address: Meerut, Uttar Pradesh, India</div>
+        <div class="contact-detail">⏱ Response time: Within 30 business days</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 DeckShot · <a href="index.html">deckshot.in</a> · All rights reserved</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:contact@deckshot.in">contact@deckshot.in</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
