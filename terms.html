@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — DeckShot</title>
+<meta name="description" content="Terms of Service for DeckShot — the rules and conditions governing your use of the DeckShot app and website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07080f;
+  --bg2: #0d0e1a;
+  --surface: #151627;
+  --surface2: #1c1d30;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.1);
+  --violet: #7c6af7;
+  --violet2: #9d8fff;
+  --violet-dim: rgba(124,106,247,0.12);
+  --teal: #22c37a;
+  --amber: #f7b96a;
+  --coral: #f76a6a;
+  --text: #f0eff8;
+  --text2: #9896b0;
+  --text3: #5a587a;
+  --mono: 'JetBrains Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 18px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(7,8,15,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo-icon {
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  background: var(--violet);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+
+.nav-logo-text {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.nav-back {
+  font-size: 13px;
+  color: var(--text2);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  transition: color 0.2s;
+}
+
+.nav-back:hover { color: var(--violet); }
+
+.page-hero {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 60px 48px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(247,185,106,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero-inner { max-width: 860px; margin: 0 auto; }
+
+.page-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--amber);
+  background: rgba(247,185,106,0.1);
+  border: 1px solid rgba(247,185,106,0.25);
+  border-radius: 6px;
+  padding: 4px 12px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.page-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.meta-item { display: flex; flex-direction: column; gap: 2px; }
+
+.meta-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.meta-value { font-size: 14px; color: var(--text2); }
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.sidebar {
+  padding: 48px 0 48px;
+  position: sticky;
+  top: 68px;
+  height: fit-content;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  border-right: 1px solid var(--border);
+  padding-right: 32px;
+  margin-right: 64px;
+}
+
+.sidebar::-webkit-scrollbar { display: none; }
+
+.sidebar-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+
+.toc-list a {
+  display: block;
+  font-size: 13px;
+  color: var(--text3);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  line-height: 1.4;
+}
+
+.toc-list a:hover { color: var(--amber); background: rgba(247,185,106,0.08); }
+
+.page-content { padding: 48px 0 80px; }
+
+.intro-box {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-left: 4px solid var(--amber);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+.intro-box strong { color: var(--text); font-weight: 500; }
+
+.policy-section {
+  margin-bottom: 56px;
+  scroll-margin-top: 90px;
+}
+
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--amber);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-heading {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-body {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.8;
+}
+
+.section-body p { margin-bottom: 16px; }
+.section-body p:last-child { margin-bottom: 0; }
+.section-body strong { color: var(--text); font-weight: 500; }
+
+.section-body h4 {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 24px 0 10px;
+}
+
+.section-body ul, .section-body ol {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-body ul li, .section-body ol li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.section-body ul li::before {
+  content: '·';
+  position: absolute;
+  left: 6px;
+  color: var(--amber);
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.section-body ol { counter-reset: item; }
+.section-body ol li { counter-increment: item; }
+.section-body ol li::before {
+  content: counter(item) '.';
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-family: var(--mono);
+  font-size: 12px;
+  top: 3px;
+}
+
+.highlight-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+.highlight-box.amber {
+  border-color: rgba(247,185,106,0.25);
+  background: rgba(247,185,106,0.05);
+}
+
+.highlight-box.coral {
+  border-color: rgba(247,106,106,0.25);
+  background: rgba(247,106,106,0.05);
+}
+
+.highlight-box.teal {
+  border-color: rgba(34,195,122,0.25);
+  background: rgba(34,195,122,0.05);
+}
+
+.highlight-box strong { color: var(--amber); font-weight: 500; }
+.highlight-box.teal strong { color: var(--teal); }
+.highlight-box.coral strong { color: var(--coral); }
+
+.contact-box {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-top: 48px;
+}
+
+.contact-box h3 {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.contact-box p {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+.contact-detail a {
+  color: var(--violet);
+  text-decoration: none;
+  font-family: var(--mono);
+}
+
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 32px 48px;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom p { font-size: 13px; color: var(--text3); }
+.footer-bottom a { color: var(--violet); text-decoration: none; }
+
+.footer-links { display: flex; gap: 24px; }
+.footer-links a {
+  font-size: 13px;
+  color: var(--text2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--violet); }
+
+@media (max-width: 900px) {
+  nav { padding: 16px 20px; }
+  .page-hero { padding: 40px 20px 36px; }
+  .page-layout { grid-template-columns: 1fr; padding: 0 20px; }
+  .sidebar { display: none; }
+  footer { padding: 24px 20px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">⚡</div>
+    <span class="nav-logo-text">DeckShot</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-tag">Legal Document</div>
+    <h1 class="page-title">Terms of Service</h1>
+    <div class="page-meta">
+      <div class="meta-item">
+        <span class="meta-label">Effective Date</span>
+        <span class="meta-value">1 May 2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Last Updated</span>
+        <span class="meta-value">1 May 2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Governing Law</span>
+        <span class="meta-value">Republic of India</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Contact</span>
+        <span class="meta-value">contact@deckshot.in</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-title">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+      <li><a href="#definitions">2. Definitions</a></li>
+      <li><a href="#eligibility">3. Eligibility</a></li>
+      <li><a href="#account">4. User Accounts</a></li>
+      <li><a href="#service">5. Description of Service</a></li>
+      <li><a href="#purchases">6. Purchases & Payments</a></li>
+      <li><a href="#refunds">7. Refund Policy</a></li>
+      <li><a href="#license">8. License & Intellectual Property</a></li>
+      <li><a href="#content">9. Content & Accuracy</a></li>
+      <li><a href="#prohibited">10. Prohibited Conduct</a></li>
+      <li><a href="#offline">11. Offline & Downloaded Content</a></li>
+      <li><a href="#third-party">12. Third-Party Services</a></li>
+      <li><a href="#disclaimers">13. Disclaimers</a></li>
+      <li><a href="#liability">14. Limitation of Liability</a></li>
+      <li><a href="#indemnification">15. Indemnification</a></li>
+      <li><a href="#termination">16. Termination</a></li>
+      <li><a href="#disputes">17. Dispute Resolution</a></li>
+      <li><a href="#governing-law">18. Governing Law</a></li>
+      <li><a href="#changes">19. Changes to Terms</a></li>
+      <li><a href="#contact-tos">20. Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <main class="page-content">
+
+    <div class="intro-box">
+      Please read these Terms of Service ("Terms") carefully before using the <strong>DeckShot</strong> mobile application or website at <strong>deckshot.in</strong>. These Terms constitute a legally binding agreement between you ("User", "you", or "your") and <strong>Mohd Zaid</strong> (sole proprietor, operating as DeckShot, "we", "us", or "our"). By downloading, installing, accessing, or using the Service, you acknowledge that you have read, understood, and agree to be bound by these Terms. <strong>If you do not agree to these Terms, do not use the Service.</strong>
+    </div>
+
+    <!-- 1. Acceptance -->
+    <div class="policy-section" id="acceptance">
+      <span class="section-num">01 /</span>
+      <h2 class="section-heading">Acceptance of Terms</h2>
+      <div class="section-body">
+        <p>By accessing or using DeckShot (the "Service"), you confirm that:</p>
+        <ul>
+          <li>You have read and understood these Terms of Service</li>
+          <li>You are at least 18 years of age or have obtained parental or guardian consent</li>
+          <li>You have the legal authority to enter into this agreement</li>
+          <li>You agree to be bound by these Terms and our <a href="privacy.html" style="color: var(--violet);">Privacy Policy</a>, which is incorporated herein by reference</li>
+        </ul>
+        <p>Your use of the Service constitutes your acceptance of these Terms. If you are using the Service on behalf of an organisation, you represent and warrant that you have the authority to bind that organisation to these Terms.</p>
+        <div class="highlight-box amber">
+          <strong>Note:</strong> These Terms apply to all versions of the DeckShot app (Android, and iOS when available), the website at deckshot.in, and all associated services, features, and content.
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Definitions -->
+    <div class="policy-section" id="definitions">
+      <span class="section-num">02 /</span>
+      <h2 class="section-heading">Definitions</h2>
+      <div class="section-body">
+        <p>For the purposes of these Terms, the following definitions apply:</p>
+        <ul>
+          <li><strong>"Service"</strong> means the DeckShot mobile application, website (deckshot.in), and all related services, features, and content.</li>
+          <li><strong>"App"</strong> means the DeckShot mobile application available on Google Play Store (Android) and, when available, the Apple App Store (iOS).</li>
+          <li><strong>"User"</strong> means any individual who accesses or uses the Service.</li>
+          <li><strong>"Account"</strong> means a registered user account created by providing an email address and password or through a supported third-party authentication provider.</li>
+          <li><strong>"Content"</strong> means all text, questions, answers, code snippets, illustrations, and other materials available through the Service.</li>
+          <li><strong>"Topic Deck"</strong> means a curated collection of interview preparation questions and answers for a specific technology topic (e.g., JavaScript, React Native).</li>
+          <li><strong>"Free Content"</strong> means the limited subset of questions in each Topic Deck available without payment.</li>
+          <li><strong>"Premium Content"</strong> means the full Topic Deck accessible upon making a one-time purchase.</li>
+          <li><strong>"Purchase"</strong> means a one-time payment to unlock a specific Topic Deck.</li>
+          <li><strong>"Razorpay"</strong> means Razorpay Software Private Limited, the third-party payment processor used by DeckShot.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Eligibility -->
+    <div class="policy-section" id="eligibility">
+      <span class="section-num">03 /</span>
+      <h2 class="section-heading">Eligibility</h2>
+      <div class="section-body">
+        <p>To use DeckShot, you must meet the following eligibility requirements:</p>
+        <ul>
+          <li>You must be at least <strong>18 years of age</strong>. If you are between 13 and 17 years of age, you may only use the Service with the explicit consent and supervision of a parent or legal guardian.</li>
+          <li>You must not be barred from using the Service under the laws of India or any other applicable jurisdiction.</li>
+          <li>You must not have a previously terminated DeckShot account due to a violation of these Terms.</li>
+          <li>You must provide accurate, current, and complete information when creating an account and keep that information updated.</li>
+        </ul>
+        <p>DeckShot reserves the right to refuse access to the Service to any person at any time for any reason, including but not limited to a violation of these Terms.</p>
+      </div>
+    </div>
+
+    <!-- 4. Account -->
+    <div class="policy-section" id="account">
+      <span class="section-num">04 /</span>
+      <h2 class="section-heading">User Accounts</h2>
+      <div class="section-body">
+        <h4>4.1 Account Creation</h4>
+        <p>To access certain features of the Service (including making purchases and syncing progress), you must create an account. You may register using an email address and password, or through a supported third-party authentication provider such as Google Sign-In.</p>
+
+        <h4>4.2 Account Security</h4>
+        <p>You are solely responsible for:</p>
+        <ul>
+          <li>Maintaining the confidentiality of your account credentials (email and password)</li>
+          <li>All activities that occur under your account, whether or not authorised by you</li>
+          <li>Notifying us immediately at contact@deckshot.in if you suspect unauthorised access to your account</li>
+          <li>Ensuring you log out of your account at the end of each session on shared devices</li>
+        </ul>
+        <p>DeckShot will not be liable for any loss or damage arising from your failure to maintain the security of your account credentials.</p>
+
+        <h4>4.3 Account Accuracy</h4>
+        <p>You agree to provide accurate, truthful, and complete information when creating your account and to promptly update such information to keep it current. Providing false information is a violation of these Terms and may result in immediate account termination.</p>
+
+        <h4>4.4 One Account Per User</h4>
+        <p>Each user is permitted to maintain only one active account. Creating multiple accounts to circumvent purchase requirements, access restrictions, or any other limitation is strictly prohibited and constitutes a material breach of these Terms.</p>
+
+        <h4>4.5 Account Transfers</h4>
+        <p>Accounts are personal and non-transferable. You may not sell, trade, gift, or otherwise transfer your account or any associated purchases to another person. Any attempted transfer is void and may result in account termination.</p>
+      </div>
+    </div>
+
+    <!-- 5. Service Description -->
+    <div class="policy-section" id="service">
+      <span class="section-num">05 /</span>
+      <h2 class="section-heading">Description of Service</h2>
+      <div class="section-body">
+        <h4>5.1 What DeckShot Provides</h4>
+        <p>DeckShot is a mobile application providing curated interview preparation content for technology professionals. The Service includes:</p>
+        <ul>
+          <li>Flashcard-based interview question and answer decks organised by technology topic</li>
+          <li>Interview-style answers designed to help users articulate technical concepts clearly</li>
+          <li>Company tags indicating which organisations have reportedly asked each question</li>
+          <li>Progress tracking, bookmarking, and card management features</li>
+          <li>Offline access to downloaded content</li>
+          <li>A freemium model with free preview cards and purchasable full decks</li>
+        </ul>
+
+        <h4>5.2 Service Availability</h4>
+        <p>We strive to maintain continuous availability of the Service but do not guarantee uninterrupted access. The Service may be temporarily unavailable due to:</p>
+        <ul>
+          <li>Scheduled maintenance (we will endeavour to provide advance notice)</li>
+          <li>Emergency maintenance or security incidents</li>
+          <li>Third-party service outages (Supabase, Razorpay, etc.)</li>
+          <li>Circumstances beyond our reasonable control (force majeure)</li>
+        </ul>
+
+        <h4>5.3 Service Modifications</h4>
+        <p>We reserve the right to modify, update, suspend, or discontinue any part of the Service at any time, with or without notice. We will endeavour to provide reasonable advance notice for significant changes. We are not liable to you or any third party for any modification, suspension, or discontinuation of the Service.</p>
+
+        <h4>5.4 Free Content</h4>
+        <p>Free Content (the first 10–15 questions of each Topic Deck) is available to all registered users at no charge. We reserve the right to adjust the number of free questions available at any time.</p>
+
+        <div class="highlight-box teal">
+          <strong>Important:</strong> DeckShot is an educational preparation tool. We do not guarantee job offers, salary increases, or interview success. Results depend on individual effort, preparation, and external factors beyond our control.
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Purchases & Payments -->
+    <div class="policy-section" id="purchases">
+      <span class="section-num">06 /</span>
+      <h2 class="section-heading">Purchases & Payments</h2>
+      <div class="section-body">
+        <h4>6.1 One-Time Purchases</h4>
+        <p>DeckShot operates on a <strong>one-time purchase model</strong>. Each Topic Deck is purchased individually and provides lifetime access to that deck for the purchasing account. There are no recurring subscriptions, monthly charges, or hidden fees.</p>
+
+        <h4>6.2 Pricing</h4>
+        <p>Prices for each Topic Deck are displayed within the App in Indian Rupees (INR) and are inclusive of applicable taxes. Prices are subject to change without notice, except that price changes will not affect purchases already completed. We reserve the right to offer promotional pricing, discounts, or bundle deals at our discretion.</p>
+
+        <h4>6.3 Payment Processing</h4>
+        <p>All payments are processed securely by <strong>Razorpay Software Private Limited</strong>, a Reserve Bank of India (RBI) regulated payment aggregator. Accepted payment methods include:</p>
+        <ul>
+          <li>Credit cards and debit cards (Visa, Mastercard, RuPay, Amex)</li>
+          <li>UPI (Google Pay, PhonePe, Paytm, BHIM, and other UPI apps)</li>
+          <li>Net banking (all major Indian banks)</li>
+          <li>Razorpay-supported wallets</li>
+          <li>EMI options (where available and subject to bank approval)</li>
+        </ul>
+
+        <h4>6.4 Payment Security</h4>
+        <p>DeckShot does not collect, store, or process your payment card details. All payment information is handled directly by Razorpay, which is PCI-DSS Level 1 certified — the highest level of security certification in the payment card industry. Your payment credentials are never transmitted to or stored on DeckShot servers.</p>
+
+        <h4>6.5 Purchase Verification</h4>
+        <p>Upon successful payment, access to the purchased Topic Deck is granted automatically. All purchase verifications are performed server-side via cryptographically signed Razorpay webhooks. If you experience any delay in receiving access after a successful payment, please contact us at contact@deckshot.in with your Razorpay Payment ID.</p>
+
+        <h4>6.6 Failed Transactions</h4>
+        <p>If a payment fails or is declined, no charge will be made to your payment instrument. Failed transactions are automatically cancelled. If you believe you have been charged for a failed transaction, contact us at contact@deckshot.in immediately with your transaction details.</p>
+
+        <h4>6.7 Taxes</h4>
+        <p>Prices displayed in the App are inclusive of Goods and Services Tax (GST) as applicable under Indian law. International users may be subject to additional taxes or duties imposed by their local jurisdiction. DeckShot is not responsible for collecting or remitting taxes outside India.</p>
+
+        <div class="highlight-box amber">
+          <strong>Purchase advice:</strong> Review the free preview cards before purchasing to ensure the content format and style meet your preparation needs. All purchases are final once made, subject to our Refund Policy in Section 7.
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Refunds -->
+    <div class="policy-section" id="refunds">
+      <span class="section-num">07 /</span>
+      <h2 class="section-heading">Refund Policy</h2>
+      <div class="section-body">
+        <h4>7.1 General Policy</h4>
+        <p>All purchases on DeckShot are generally <strong>final and non-refundable</strong>, given the digital nature of the content and the immediate access granted upon purchase. We encourage all users to explore the free preview questions before purchasing to ensure satisfaction with the content format.</p>
+
+        <h4>7.2 Eligible Refund Situations</h4>
+        <p>We will consider refund requests in the following exceptional circumstances:</p>
+        <ul>
+          <li><strong>Duplicate charge:</strong> You were charged more than once for the same Topic Deck due to a technical error</li>
+          <li><strong>Payment deducted but access not granted:</strong> Your payment was successfully deducted but the Topic Deck was not unlocked within 24 hours and the issue was not resolved after contacting support</li>
+          <li><strong>Significant technical failure:</strong> The purchased content is completely inaccessible due to a verified technical fault on our end and cannot be remediated within a reasonable time</li>
+        </ul>
+
+        <h4>7.3 Non-Eligible Refund Situations</h4>
+        <p>Refunds will NOT be provided in the following circumstances:</p>
+        <ul>
+          <li>You changed your mind after purchasing</li>
+          <li>You did not use the purchased content</li>
+          <li>You found similar content elsewhere at a lower price</li>
+          <li>Your device is incompatible with the App (compatibility information is available on the Play Store listing)</li>
+          <li>The refund request is made more than 7 days after the purchase date</li>
+          <li>You violated these Terms of Service</li>
+        </ul>
+
+        <h4>7.4 How to Request a Refund</h4>
+        <p>To request a refund, email us at <strong>contact@deckshot.in</strong> within <strong>7 days of purchase</strong> with:</p>
+        <ul>
+          <li>Your registered email address</li>
+          <li>The Razorpay Payment ID (available in your payment confirmation email)</li>
+          <li>The Topic Deck purchased</li>
+          <li>A clear description of the issue</li>
+        </ul>
+        <p>We will review your request and respond within 5 business days. Approved refunds will be processed to the original payment method within 5–10 business days, depending on your bank or payment provider.</p>
+
+        <h4>7.5 Google Play Refunds</h4>
+        <p>If you made a purchase through the Google Play Store and are within Google Play's refund window, you may also request a refund directly through Google Play. Google Play's refund policies apply independently of DeckShot's refund policy.</p>
+      </div>
+    </div>
+
+    <!-- 8. License & IP -->
+    <div class="policy-section" id="license">
+      <span class="section-num">08 /</span>
+      <h2 class="section-heading">License & Intellectual Property</h2>
+      <div class="section-body">
+        <h4>8.1 License Granted to You</h4>
+        <p>Subject to your compliance with these Terms and payment of applicable fees, DeckShot grants you a <strong>limited, non-exclusive, non-transferable, non-sublicensable, revocable licence</strong> to:</p>
+        <ul>
+          <li>Download and install the App on devices you own or control</li>
+          <li>Access and use the Service for your personal, non-commercial interview preparation purposes</li>
+          <li>Download and use offline content as permitted by the App's offline feature</li>
+        </ul>
+        <p>This licence does not include any right to resell or commercially exploit the Service or its Content.</p>
+
+        <h4>8.2 Ownership of Content</h4>
+        <p>All Content within DeckShot — including but not limited to interview questions, answers, code snippets, illustrations, app design, UI elements, logos, trademarks, and the DeckShot name — is the exclusive intellectual property of DeckShot (Mohd Zaid) and is protected under the <strong>Copyright Act, 1957</strong> and other applicable Indian and international intellectual property laws.</p>
+
+        <h4>8.3 Restrictions</h4>
+        <p>You expressly agree NOT to:</p>
+        <ul>
+          <li>Copy, reproduce, distribute, publish, display, or transmit any Content from the Service without prior written permission</li>
+          <li>Screenshot, record, or extract Content for redistribution or commercial use</li>
+          <li>Share, sell, sublicense, or transfer your account or access to another person</li>
+          <li>Create derivative works based on DeckShot Content</li>
+          <li>Reverse engineer, decompile, disassemble, or attempt to extract the source code of the App</li>
+          <li>Remove or obscure any copyright, trademark, or other proprietary notices</li>
+          <li>Use automated tools, bots, or scrapers to access or extract Content</li>
+          <li>Use DeckShot Content to train artificial intelligence or machine learning models</li>
+          <li>Republish or represent DeckShot Content as your own</li>
+        </ul>
+
+        <h4>8.4 Feedback</h4>
+        <p>If you provide suggestions, ideas, feedback, or recommendations regarding the Service ("Feedback"), you grant DeckShot a non-exclusive, worldwide, royalty-free, irrevocable licence to use, copy, modify, and incorporate such Feedback into the Service without any obligation to you.</p>
+
+        <div class="highlight-box coral">
+          <strong>Copyright violation:</strong> Any unauthorised reproduction or distribution of DeckShot Content is a serious infringement of our intellectual property rights and may result in legal action under the Copyright Act, 1957, and other applicable laws.
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Content & Accuracy -->
+    <div class="policy-section" id="content">
+      <span class="section-num">09 /</span>
+      <h2 class="section-heading">Content & Accuracy</h2>
+      <div class="section-body">
+        <h4>9.1 Content Curation</h4>
+        <p>DeckShot Content is curated based on the founder's personal industry experience, user reports, publicly available interview accounts (Glassdoor, LinkedIn, community forums), and industry research. All Content is reviewed and written by qualified technology professionals.</p>
+
+        <h4>9.2 No Guarantee of Accuracy</h4>
+        <p>While we make every effort to ensure the accuracy, completeness, and currency of our Content, technology evolves rapidly. We do not warrant that:</p>
+        <ul>
+          <li>All Content is completely accurate, up-to-date, or free from errors</li>
+          <li>Specific questions in our decks will appear verbatim in any interview</li>
+          <li>Company tags accurately reflect current interview practices of those companies</li>
+          <li>Code examples are production-ready or suitable for all use cases</li>
+        </ul>
+
+        <h4>9.3 Content Updates</h4>
+        <p>We regularly review and update Content to reflect current industry practices and technologies. Significant updates to purchased decks are provided at no additional charge. We reserve the right to add, modify, or remove individual questions from any deck without notice.</p>
+
+        <h4>9.4 Reporting Errors</h4>
+        <p>If you believe any Content contains an error, inaccuracy, or outdated information, please report it using the in-app "Report" feature on the relevant card, or email us at contact@deckshot.in. We take content quality seriously and will review all reported issues promptly.</p>
+      </div>
+    </div>
+
+    <!-- 10. Prohibited Conduct -->
+    <div class="policy-section" id="prohibited">
+      <span class="section-num">10 /</span>
+      <h2 class="section-heading">Prohibited Conduct</h2>
+      <div class="section-body">
+        <p>You agree not to engage in any of the following prohibited activities. Violation of these prohibitions may result in immediate account termination and, where applicable, legal action:</p>
+
+        <h4>10.1 Misuse of the Service</h4>
+        <ul>
+          <li>Using the Service for any unlawful purpose or in violation of any applicable law or regulation</li>
+          <li>Accessing or attempting to access another user's account without authorisation</li>
+          <li>Using the Service to harass, intimidate, or harm any person</li>
+          <li>Impersonating DeckShot, its employees, or any other person or entity</li>
+          <li>Creating accounts using false information or on behalf of another person without their consent</li>
+        </ul>
+
+        <h4>10.2 Technical Misuse</h4>
+        <ul>
+          <li>Attempting to probe, scan, or test the vulnerability of the Service or any related system</li>
+          <li>Attempting to bypass, disable, or circumvent any security measure or access control</li>
+          <li>Introducing viruses, malware, or other harmful code into the Service</li>
+          <li>Using automated scripts, bots, crawlers, or scrapers to access the Service</li>
+          <li>Performing denial-of-service attacks or overloading our infrastructure</li>
+          <li>Intercepting or monitoring network traffic related to the Service</li>
+        </ul>
+
+        <h4>10.3 Circumvention of Payment</h4>
+        <ul>
+          <li>Attempting to access Premium Content without completing a valid purchase</li>
+          <li>Sharing purchased account credentials with other individuals</li>
+          <li>Exploiting bugs or errors to gain unauthorised access to Premium Content</li>
+          <li>Issuing chargebacks fraudulently after receiving Premium Content</li>
+        </ul>
+
+        <h4>10.4 Content Misuse</h4>
+        <ul>
+          <li>Reproducing, distributing, or commercially exploiting DeckShot Content</li>
+          <li>Uploading DeckShot Content to third-party platforms, websites, or applications</li>
+          <li>Using DeckShot Content to create competing products or services</li>
+          <li>Claiming authorship of DeckShot Content</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 11. Offline Content -->
+    <div class="policy-section" id="offline">
+      <span class="section-num">11 /</span>
+      <h2 class="section-heading">Offline & Downloaded Content</h2>
+      <div class="section-body">
+        <p>DeckShot allows you to download Topic Decks for offline use, subject to the following conditions:</p>
+        <ul>
+          <li>Offline content may only be downloaded to devices you own or control and is intended solely for your personal use</li>
+          <li>Downloaded content is encrypted on your device and may only be accessed through the DeckShot App</li>
+          <li>Offline access is tied to your account. If your account is terminated or a purchase is reversed, offline content access may be revoked</li>
+          <li>You may not transfer, copy, or extract downloaded content files to other applications or devices</li>
+          <li>Offline content is provided as a convenience feature. We do not guarantee the availability, completeness, or accuracy of offline content after significant updates are made to the live deck</li>
+          <li>Downloaded content will be updated when you reconnect to the internet, which may result in changes to the content you have stored</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 12. Third-Party Services -->
+    <div class="policy-section" id="third-party">
+      <span class="section-num">12 /</span>
+      <h2 class="section-heading">Third-Party Services</h2>
+      <div class="section-body">
+        <p>The Service integrates with and relies upon the following third-party services:</p>
+        <ul>
+          <li><strong>Supabase:</strong> Backend infrastructure, database, and authentication. Subject to Supabase's Terms of Service (supabase.com/terms) and Privacy Policy.</li>
+          <li><strong>Razorpay:</strong> Payment processing. Subject to Razorpay's Terms of Service (razorpay.com/terms) and Privacy Policy. By making a purchase, you also agree to Razorpay's terms.</li>
+          <li><strong>Google Play Store:</strong> App distribution on Android. Subject to Google Play's Terms of Service.</li>
+          <li><strong>Google Sign-In (optional):</strong> Third-party authentication. Subject to Google's Terms of Service.</li>
+        </ul>
+        <p>DeckShot is not responsible for the availability, accuracy, or practices of third-party services. Any issues arising from third-party service failures should be directed to the respective service provider.</p>
+        <p>The Service may contain links to external websites or resources. These links are provided for convenience only. DeckShot has no control over third-party websites and is not responsible for their content, privacy practices, or availability. Accessing third-party links is at your own risk.</p>
+      </div>
+    </div>
+
+    <!-- 13. Disclaimers -->
+    <div class="policy-section" id="disclaimers">
+      <span class="section-num">13 /</span>
+      <h2 class="section-heading">Disclaimers</h2>
+      <div class="section-body">
+        <h4>13.1 No Guarantee of Employment</h4>
+        <p>DeckShot provides educational content to assist with interview preparation. <strong>We make no guarantee, representation, or warranty that use of our Service will result in job offers, employment, salary increases, or success in any interview.</strong> Interview outcomes depend on many factors beyond our control, including your individual performance, the specific requirements of the hiring organisation, market conditions, and competition.</p>
+
+        <h4>13.2 "As Is" Service</h4>
+        <p>The Service is provided on an <strong>"as is" and "as available" basis</strong>, without warranties of any kind, whether express, implied, or statutory. To the fullest extent permitted by applicable law, DeckShot expressly disclaims all warranties, including:</p>
+        <ul>
+          <li>Implied warranties of merchantability and fitness for a particular purpose</li>
+          <li>Warranties of title and non-infringement</li>
+          <li>Warranties that the Service will be uninterrupted, error-free, or secure</li>
+          <li>Warranties regarding the accuracy, completeness, or timeliness of Content</li>
+        </ul>
+
+        <h4>13.3 Technical Accuracy</h4>
+        <p>Content within DeckShot represents best-practice answers as of the date of creation. Technology evolves rapidly and certain answers may become outdated. DeckShot is not liable for decisions made based on Content that has since become inaccurate or obsolete.</p>
+
+        <h4>13.4 Company Tags</h4>
+        <p>Company tags on question cards indicate that such questions have been reportedly asked by those companies based on publicly available information and community reports. These tags do not imply any affiliation with, endorsement by, or official confirmation from the named companies. Interview formats and question patterns may change at any time.</p>
+
+        <div class="highlight-box coral">
+          <strong>Important disclaimer:</strong> DeckShot is an independent product and is not affiliated with, endorsed by, or officially connected to any company mentioned in our content (including Google, Flipkart, Razorpay, Amazon, Meta, Zomato, Swiggy, or any other named organisation). Company names and logos are trademarks of their respective owners.
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. Limitation of Liability -->
+    <div class="policy-section" id="liability">
+      <span class="section-num">14 /</span>
+      <h2 class="section-heading">Limitation of Liability</h2>
+      <div class="section-body">
+        <h4>14.1 Exclusion of Consequential Damages</h4>
+        <p>To the fullest extent permitted by applicable law, DeckShot, its founder, employees, agents, and affiliates shall not be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to:</p>
+        <ul>
+          <li>Loss of profits, revenue, or business opportunities</li>
+          <li>Loss of data or data breaches not caused by our negligence</li>
+          <li>Loss of goodwill or reputation</li>
+          <li>Cost of substitute services</li>
+          <li>Any damages arising from your reliance on DeckShot Content</li>
+          <li>Damages arising from your failure to secure your account credentials</li>
+        </ul>
+
+        <h4>14.2 Cap on Liability</h4>
+        <p>In all cases, DeckShot's total aggregate liability to you for any claims arising out of or related to these Terms or the Service shall not exceed the greater of:</p>
+        <ul>
+          <li>The total amount paid by you to DeckShot in the <strong>six (6) months preceding the event giving rise to the claim</strong>, or</li>
+          <li><strong>INR 500 (Indian Rupees Five Hundred)</strong></li>
+        </ul>
+
+        <h4>14.3 Essential Basis</h4>
+        <p>The limitations of liability set forth in this Section reflect an allocation of risk between the parties and form an essential basis of the bargain between you and DeckShot. These limitations apply regardless of the legal or equitable theory on which the claim is based.</p>
+
+        <h4>14.4 Applicability</h4>
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain types of liability. In such jurisdictions, our liability shall be limited to the maximum extent permitted by applicable law.</p>
+      </div>
+    </div>
+
+    <!-- 15. Indemnification -->
+    <div class="policy-section" id="indemnification">
+      <span class="section-num">15 /</span>
+      <h2 class="section-heading">Indemnification</h2>
+      <div class="section-body">
+        <p>You agree to defend, indemnify, and hold harmless DeckShot, its founder, employees, contractors, agents, licensors, and suppliers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:</p>
+        <ul>
+          <li>Your violation of these Terms of Service</li>
+          <li>Your use or misuse of the Service</li>
+          <li>Your violation of any applicable law or regulation</li>
+          <li>Your violation of any third party's rights, including intellectual property rights</li>
+          <li>Any Content you submit, post, or transmit through the Service</li>
+          <li>Your wilful misconduct or negligence</li>
+        </ul>
+        <p>DeckShot reserves the right to assume exclusive control of the defence of any matter subject to indemnification by you, in which case you agree to cooperate with DeckShot in asserting any available defences at your own expense.</p>
+      </div>
+    </div>
+
+    <!-- 16. Termination -->
+    <div class="policy-section" id="termination">
+      <span class="section-num">16 /</span>
+      <h2 class="section-heading">Termination</h2>
+      <div class="section-body">
+        <h4>16.1 Termination by You</h4>
+        <p>You may delete your account at any time through the Profile section of the App or by emailing contact@deckshot.in. Upon deletion:</p>
+        <ul>
+          <li>Your account and personal data will be deleted within 30 days, subject to data retention requirements described in our Privacy Policy</li>
+          <li>Access to all Free and Premium Content will cease immediately</li>
+          <li>No refunds will be issued for unused Premium Content upon voluntary account deletion</li>
+          <li>These Terms will cease to apply, except for provisions that by their nature should survive termination</li>
+        </ul>
+
+        <h4>16.2 Termination by DeckShot</h4>
+        <p>DeckShot reserves the right to suspend or terminate your account immediately, without prior notice or liability, for any reason, including but not limited to:</p>
+        <ul>
+          <li>Material breach of these Terms</li>
+          <li>Violation of Section 10 (Prohibited Conduct)</li>
+          <li>Fraudulent, abusive, or illegal activity</li>
+          <li>Chargebacks or payment disputes filed in bad faith</li>
+          <li>Extended periods of account inactivity (greater than 24 months)</li>
+          <li>Requests from law enforcement or regulatory authorities</li>
+        </ul>
+
+        <h4>16.3 Effect of Termination</h4>
+        <p>Upon termination of your account by either party:</p>
+        <ul>
+          <li>All licences granted to you under these Terms immediately terminate</li>
+          <li>Access to the Service, including all downloaded offline content, will be revoked</li>
+          <li>Provisions relating to intellectual property, disclaimers, limitation of liability, indemnification, and dispute resolution shall survive termination</li>
+        </ul>
+
+        <h4>16.4 Service Discontinuation</h4>
+        <p>If DeckShot discontinues the Service entirely, we will provide at least <strong>30 days' advance notice</strong> via email and in-app notification. In such event, we will make reasonable efforts to provide access to content for the duration of the notice period.</p>
+      </div>
+    </div>
+
+    <!-- 17. Dispute Resolution -->
+    <div class="policy-section" id="disputes">
+      <span class="section-num">17 /</span>
+      <h2 class="section-heading">Dispute Resolution</h2>
+      <div class="section-body">
+        <h4>17.1 Informal Resolution First</h4>
+        <p>Before initiating any formal legal proceeding, you agree to first contact DeckShot at <strong>contact@deckshot.in</strong> and attempt to resolve the dispute informally. We will endeavour to respond within 15 business days. Most disputes can be resolved through good-faith communication.</p>
+
+        <h4>17.2 Formal Dispute Resolution</h4>
+        <p>If informal resolution fails after 30 days of good-faith negotiation, any dispute, claim, or controversy arising out of or relating to these Terms, the Service, or your use thereof shall be resolved by:</p>
+        <ol>
+          <li><strong>Mediation:</strong> The parties shall first attempt to resolve the dispute through mediation before a mutually agreed mediator. Costs of mediation shall be shared equally.</li>
+          <li><strong>Arbitration:</strong> If mediation fails, disputes shall be finally settled by binding arbitration in accordance with the Arbitration and Conciliation Act, 1996 (India). The seat of arbitration shall be Meerut, Uttar Pradesh, India. The arbitration shall be conducted in English. The arbitrator's award shall be final and binding.</li>
+        </ol>
+
+        <h4>17.3 Small Claims</h4>
+        <p>Notwithstanding the above, either party may bring an individual action in an appropriate small claims court or consumer forum for claims within the jurisdiction of such court.</p>
+
+        <h4>17.4 No Class Actions</h4>
+        <p>You agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action. You waive your right to participate in any class action lawsuit or class-wide arbitration.</p>
+
+        <h4>17.5 Consumer Forum</h4>
+        <p>Nothing in these Terms shall restrict your right to file a complaint with the appropriate consumer forum under the Consumer Protection Act, 2019 (India).</p>
+      </div>
+    </div>
+
+    <!-- 18. Governing Law -->
+    <div class="policy-section" id="governing-law">
+      <span class="section-num">18 /</span>
+      <h2 class="section-heading">Governing Law & Jurisdiction</h2>
+      <div class="section-body">
+        <p>These Terms of Service are governed by and construed in accordance with the laws of the <strong>Republic of India</strong>, without regard to its conflict of law provisions.</p>
+        <p>Subject to the arbitration provisions in Section 17, any legal proceedings arising out of or in connection with these Terms shall be brought exclusively in the competent courts of <strong>Meerut, Uttar Pradesh, India</strong>, and you consent to the personal jurisdiction of such courts.</p>
+        <p>The following Indian laws, among others, are applicable to these Terms:</p>
+        <ul>
+          <li>Information Technology Act, 2000 and rules thereunder</li>
+          <li>Digital Personal Data Protection Act, 2023</li>
+          <li>Consumer Protection Act, 2019</li>
+          <li>Copyright Act, 1957</li>
+          <li>Indian Contract Act, 1872</li>
+          <li>Arbitration and Conciliation Act, 1996</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 19. Changes -->
+    <div class="policy-section" id="changes">
+      <span class="section-num">19 /</span>
+      <h2 class="section-heading">Changes to Terms</h2>
+      <div class="section-body">
+        <p>DeckShot reserves the right to modify these Terms at any time. When we make material changes, we will:</p>
+        <ul>
+          <li>Update the "Last Updated" date at the top of this page</li>
+          <li>Send an email notification to all registered users</li>
+          <li>Display a prominent in-app notification requiring acknowledgement</li>
+          <li>Provide at least <strong>14 days' advance notice</strong> before material changes take effect, except where changes are required by law</li>
+        </ul>
+        <p>Your continued use of the Service after the effective date of revised Terms constitutes your acceptance of the changes. If you disagree with the revised Terms, you must stop using the Service and may request account deletion.</p>
+        <p>For significant changes affecting paid features or purchased content, we will provide no less than 30 days' notice and will honour existing purchases under the Terms in effect at the time of purchase.</p>
+      </div>
+    </div>
+
+    <!-- 20. Contact -->
+    <div class="policy-section" id="contact-tos">
+      <span class="section-num">20 /</span>
+      <h2 class="section-heading">Contact Us</h2>
+      <div class="section-body">
+        <p>For any questions, concerns, or notices regarding these Terms of Service, please contact us through any of the following channels:</p>
+      </div>
+      <div class="contact-box">
+        <h3>DeckShot — Legal & Support</h3>
+        <p>We will respond to all enquiries within 5 business days. For urgent legal matters, please mark your email with "URGENT — Legal" in the subject line.</p>
+        <div class="contact-detail">📧 Email: <a href="mailto:contact@deckshot.in">contact@deckshot.in</a></div>
+        <div class="contact-detail">🌐 Website: <a href="https://deckshot.in">deckshot.in</a></div>
+        <div class="contact-detail">📍 Registered Address: Meerut, Uttar Pradesh, India</div>
+        <div class="contact-detail">⚖️ Grievance Officer: Mohd Zaid (contact@deckshot.in)</div>
+        <div class="contact-detail">⏱ Response time: Within 5 business days (30 days for legal notices)</div>
+      </div>
+
+      <div class="highlight-box teal" style="margin-top: 32px;">
+        <strong>Acknowledgement:</strong> By using DeckShot, you acknowledge that you have read these Terms of Service in their entirety, understood them, and agree to be bound by all of their provisions. These Terms, together with our Privacy Policy, constitute the entire agreement between you and DeckShot regarding the Service.
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 DeckShot · <a href="index.html">deckshot.in</a> · All rights reserved</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:contact@deckshot.in">contact@deckshot.in</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
