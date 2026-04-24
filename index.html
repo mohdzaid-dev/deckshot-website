@@ -1478,6 +1478,76 @@ footer {
   transform: translateY(0);
 }
 
+
+  /* Modal Background */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background: #121212;
+  border: 1px solid var(--violet);
+  padding: 40px;
+  border-radius: 24px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(111, 66, 193, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+}
+
+.badge {
+  background: var(--violet);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.waitlist-box {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border: 1px dashed #333;
+}
+
+.email-link {
+  color: var(--violet);
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.small-print {
+  font-size: 12px;
+  color: #555;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
@@ -1534,14 +1604,30 @@ footer {
     After <strong>6+ years in the industry</strong>, I mapped every question that gets repeated in tech interviews. DeckShot gives you that exact list — so you walk in ready, not guessing.
   </p>
 
-  <div class="hero-buttons">
+  <!-- <div class="hero-buttons">
     <a href="#download" class="btn-primary">
       ⚡ Download Free — Android
     </a>
     <a href="#topics" class="btn-secondary">
       Browse Topics →
     </a>
+  </div> -->
+
+  <section class="cta-section" id="download">
+  <div class="cta-box">
+    <div class="reveal">
+      <h2 class="cta-headline">Your next interviewer<br><span style="color: var(--violet);">is already prepared.</span></h2>
+      <p class="cta-sub">They know what questions to ask. The only question is — will you know the answers when they do?</p>
+      
+      <button onclick="openWaitlist()" class="btn-primary" style="display:inline-flex; font-size: 16px; padding: 18px 48px; border:none; cursor:pointer;">
+        ⚡ Get Early Access
+      </button>
+      
+      <br>
+      <span class="pizza-line">🍕 Less than a pizza slice · <strong>₹199 per topic · Lifetime access</strong></span>
+    </div>
   </div>
+</section>
 
   <div class="hero-stats">
     <div class="stat-item">
@@ -2094,7 +2180,7 @@ footer {
 </section>
 
 <!-- ═══════════ FINAL CTA ═══════════ -->
-<section class="cta-section" id="download">
+<!-- <section class="cta-section" id="download">
   <div class="cta-box">
     <div class="reveal">
       <h2 class="cta-headline">Your next interviewer<br><span style="color: var(--violet);">is already prepared.</span></h2>
@@ -2106,7 +2192,43 @@ footer {
       <span class="pizza-line">🍕 Less than a pizza slice · <strong>₹199 per topic · Lifetime access</strong></span>
     </div>
   </div>
+</section> -->
+
+  <section class="cta-section" id="download">
+  <div class="cta-box">
+    <div class="reveal">
+      <h2 class="cta-headline">Your next interviewer<br><span style="color: var(--violet);">is already prepared.</span></h2>
+      <p class="cta-sub">They know what questions to ask. The only question is — will you know the answers when they do?</p>
+      
+      <button onclick="openWaitlist()" class="btn-primary" style="display:inline-flex; font-size: 16px; padding: 18px 48px; border:none; cursor:pointer;">
+        ⚡ Get Early Access
+      </button>
+      
+      <br>
+      <span class="pizza-line">🍕 Less than a pizza slice · <strong>₹199 per topic · Lifetime access</strong></span>
+    </div>
+  </div>
 </section>
+
+  <div id="waitlistModal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeWaitlist()">&times;</span>
+    <div class="modal-header">
+      <span class="badge">Limited Slots</span>
+      <h3>Join the Founding Members</h3>
+    </div>
+    <p>DeckShot is currently in <strong>Closed Beta</strong> for developers at top MNCs. We are opening public access on April 28th.</p>
+    
+    <div class="waitlist-box">
+      <p>To reserve your <strong>₹199 lifetime price</strong>, send "WAITLIST" to:</p>
+      <a href="mailto:contact@deckshot.in?subject=Join%20Waitlist&body=Hi%20Zaid,%20I'd%20like%20to%20join%20the%20DeckShot%20waitlist." class="email-link">
+        contact@deckshot.in
+      </a>
+    </div>
+    
+    <p class="small-print">Founding members get 90% off the official launch price.</p>
+  </div>
+</div>
 
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer>
@@ -2214,6 +2336,22 @@ window.addEventListener('scroll', () => {
   document.querySelector('nav').style.borderBottomColor =
     window.scrollY > 50 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)';
 });
+
+  function openWaitlist() {
+  document.getElementById('waitlistModal').style.display = 'flex';
+}
+
+function closeWaitlist() {
+  document.getElementById('waitlistModal').style.display = 'none';
+}
+
+// Close if user clicks outside the box
+window.onclick = function(event) {
+  let modal = document.getElementById('waitlistModal');
+  if (event.target == modal) {
+    closeWaitlist();
+  }
+}
 </script>
 </body>
 </html>
