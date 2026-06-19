@@ -3024,30 +3024,24 @@ footer {
   </div>
 </section>
 
-<div class="modal-content">
-  <span class="close-modal" onclick="closeWaitlist()">&times;</span>
-  <div class="modal-header">
-    <span class="badge">Now Live 🎉</span>
-    <h3>DeckShot is on the Play Store!</h3>
+  <div id="waitlistModal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeWaitlist()">&times;</span>
+    <div class="modal-header">
+      <span class="badge">Limited Slots</span>
+      <h3>Join the Founding Members</h3>
+    </div>
+    <p>DeckShot is currently in <strong>Closed Beta</strong> for developers at top MNCs. We are opening public access on April 28th.</p>
+    
+    <div class="waitlist-box">
+      <p>To reserve your <strong>₹199 lifetime price</strong>, send "WAITLIST" to:</p>
+      <a href="mailto:contact@deckshot.in?subject=Join%20Waitlist&body=Hi%20Zaid,%20I'd%20like%20to%20join%20the%20DeckShot%20waitlist." class="email-link">
+        contact@deckshot.in
+      </a>
+    </div>
+    
+    <p class="small-print">Founding members get 90% off the official launch price.</p>
   </div>
-  <p>Start prepping today — 500+ real interview questions, flashcard-style, curated from top MNCs.</p>
-
-  <div class="waitlist-box">
-    <p>Download free on Android 👇</p>
-    <a href="https://play.google.com/store/apps/details?id=com.DeckShot"
-       target="_blank"
-       class="email-link"
-       style="font-size:15px;">
-      ⚡ Get it on Google Play
-    </a>
-  </div>
-
-  <p style="margin-top: 12px; font-size:13px; color: var(--teal);">🍎 iOS coming soon — drop us a mail to get notified.</p>
-  <a href="mailto:contact@deckshot.in?subject=Notify me for iOS&body=Hi, please notify me when DeckShot launches on iOS."
-     style="font-size:13px; color: var(--violet);">
-    contact@deckshot.in
-  </a>
-  <p class="small-print" style="margin-top:12px;">₹199 per topic · Lifetime access · No subscription</p>
 </div>
 
 <!-- ═══════════ FOOTER ═══════════ -->
@@ -3068,7 +3062,7 @@ footer {
           <li><a href="#resume-builder">AI Resume Builder</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="https://play.google.com/store/apps/details?id=com.DeckShot" target="_blank" class="nav-cta">Download App</a></li>
+          <li><a href="#download">Download App</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -3189,4 +3183,3 @@ window.onclick = function(event) {
 }
 </script>
 </body>
-</html>
